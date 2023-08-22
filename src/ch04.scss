@@ -1,0 +1,36 @@
+// Sass快速入門 - mixins，function、if else，邏輯與流程控制
+
+@mixin square ($size, $color: #000) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+  margin-bottom: 10px;
+
+  @if $size > 100px {
+    border-radius: 99px;
+  }
+}
+
+@function getMarginLeft($size) {
+  @if $size < 100px {
+    @return 30px;
+  } @else {
+    @return 50px;
+  }
+  // @return $size / 2;
+}
+
+.box {
+  @include square(50px, rgb(233, 125, 125));
+  margin-left: getMarginLeft(50px);
+}
+
+.box1 {
+  @include square(100px, rgb(115, 224, 115));
+  margin-left: getMarginLeft(100px);
+}
+
+.box2 {
+  @include square(200px);
+  margin-left: getMarginLeft(200px);
+}
