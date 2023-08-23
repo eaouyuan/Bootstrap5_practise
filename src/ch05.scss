@@ -1,0 +1,40 @@
+// Sass快速入門 - extend，繼承與它的利與弊
+
+// .common-font-color {
+//   color: rgb(75, 152, 224);
+// }
+
+// .title-xxxx-xxxx--xxxx > .test > .test2 > .test3  {
+//   @extend .common-font-color;
+//   font-size: 24px;
+// }
+
+// .desc-xxxx-xxxx--xxxx {
+//   @extend .common-font-color;
+//   font-size: 16px;
+// }
+
+// .desc2-xxxx-xxxx--xxxx {
+//   @extend .common-font-color;
+//   font-size: 14px;
+// }
+
+
+@mixin common-font-color {
+  color: rgb(75, 152, 224);
+} 
+
+.title-xxxx-xxxx--xxxx > .test > .test2 > .test3 {
+  @include common-font-color();
+  font-size: 24px;
+}
+
+.desc-xxxx-xxxx--xxxx {
+  @include common-font-color();
+  font-size: 16px;
+}
+
+.desc2-xxxx-xxxx--xxxx {
+  @include common-font-color();
+  font-size: 14px;
+}

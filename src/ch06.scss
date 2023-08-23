@@ -1,0 +1,20 @@
+// Sass快速入門 - map，樣式的組合
+
+@use "sass:map";
+
+// $font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+$font-weights: ();
+
+// $font-weights: map.set($font-weights, "extra-bold", 900);
+
+$light-weights: ("lightest": 100, "light": 300);
+$heavy-weights: ("medium": 500, "bold": 700);
+
+$font-weights: map.merge($light-weights, $heavy-weights);
+
+.title {
+  font-weight: map.get($font-weights, "medium");;
+}
+
+// $text: ("large": 64px, "small": 16px);
