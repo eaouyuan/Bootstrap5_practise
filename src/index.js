@@ -1,1 +1,1 @@
-import './ch05.scss'
+import './ch06.scss'

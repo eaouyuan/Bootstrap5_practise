@@ -14,7 +14,7 @@ $heavy-weights: ("medium": 500, "bold": 700);
 $font-weights: map.merge($light-weights, $heavy-weights);
 
 .title {
-  font-weight: map.get($font-weights, "medium");;
+  font-weight: map.get($font-weights, "bold");;
 }
 
 // $text: ("large": 64px, "small": 16px);
