@@ -35,3 +35,7 @@
 
   }
 }
+// ch6-5 套用CSS原生變數
+.desc{
+  color:var(--bs-blue); 
+}

@@ -36,7 +36,7 @@
 // );
 
 // Add to map--最常用
-// // Create your own map
+// Create your own map
 // $custom-colors: (
 //   "custom-color": #900
 // );
@@ -58,3 +58,6 @@
 
 @import "../node_modules/bootstrap/scss/buttons";
 @import "../node_modules/bootstrap/scss/offcanvas";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/popover";
