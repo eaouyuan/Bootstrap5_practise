@@ -20,5 +20,5 @@
 }
 
 .custom-container {
-  @include make-container();
+  @include make-container(60px);
 }
