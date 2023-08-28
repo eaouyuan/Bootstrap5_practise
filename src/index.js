@@ -5,7 +5,7 @@ import './index.scss'
 import 'bootstrap/js/dist/collapse'
 import Alert from 'bootstrap/js/dist/alert'
 import Button from 'bootstrap/js/dist/button'
-
+import Carousel from 'bootstrap/js/dist/carousel'
 
 function alertHandler() {
   const alertCustomDiv = document.getElementById('alertCustom');
@@ -34,4 +34,42 @@ function alertHandler() {
   }
 }
 
+function buttonHandler() {
+  const button = document.getElementById('myButton')
+  const bsButton = new Button(button)
+  setTimeout(() => {
+    bsButton.toggle()
+  }, 2000)
+}
 
+function carouselHandler() {
+  const myCarousel = document.getElementById('carouselExampleJS')
+  const myCarouselBtnPrev = document.getElementById('carouselExampleJSPrev')
+  const myCarouselBtnNext = document.getElementById('carouselExampleJSNext')
+  const carousel = new Carousel(myCarousel, {
+    interval: 2000,
+    touch: true
+  })
+
+  myCarouselBtnPrev.addEventListener('click', function () {
+    carousel.prev()
+  })
+
+  myCarouselBtnNext.addEventListener('click', function () {
+    carousel.next()
+  })
+
+
+  myCarousel.addEventListener('slide.bs.carousel', function () {
+    console.log('slide...')
+  })
+
+  myCarousel.addEventListener('slid.bs.carousel', function () {
+    console.log('slid')
+  })
+}
+
+
+// alertHandler();
+// buttonHandler();
+// carouselHandler()
