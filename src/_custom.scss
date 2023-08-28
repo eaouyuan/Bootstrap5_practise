@@ -3,21 +3,74 @@
 
 // // Include any default variable overrides here (though functions won't be available)
 
-// $btn-font-size:  30px;
-// $enable-cssgrid: true;
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      class: cursor-yuan,
+      responsive: false,
+      values: auto pointer grab,
+    )
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "width": map-merge(
+      map-get($utilities, "width"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "width"), "values"),
+          (custom-yuan-10: 300px),
+        ),
+      ),
+    ),
+  )
+);
+
+
+$utilities: map-merge(
+  $utilities, (
+    // ressponsive turn on
+    "border": map-merge(
+      map-get($utilities, "border"),
+      ( responsive: true ),
+    ),
+    "border-width": map-merge(
+      map-get($utilities, "border-width"),
+      ( responsive: true ),
+    ),
+    // Rename
+    "margin-start": map-merge(
+      map-get($utilities, "margin-start"),
+      ( class: ml ),
+    ),
+    "margin-end": map-merge(
+      map-get($utilities, "margin-end"),
+      ( class: mr ),
+    ),
+  )
+);
+
+
+
+@import "../node_modules/bootstrap/scss/utilities/api";
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // // Then add additional custom code here
 
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 900px,
-//   xl: 1140px,
-//   xxl: 1320px
-// );
-// @import "../node_modules/bootstrap/scss/containers";
+
 
 // ---------------------------------------------------------
 
