@@ -2,7 +2,7 @@
 import './index.scss'
 // Import all of Bootstrap's JS
 // import * as bootstrap from 'bootstrap'
-import 'bootstrap/js/dist/collapse'
+import Collapse from 'bootstrap/js/dist/collapse'
 import Alert from 'bootstrap/js/dist/alert'
 import Button from 'bootstrap/js/dist/button'
 import Carousel from 'bootstrap/js/dist/carousel'
@@ -69,7 +69,32 @@ function carouselHandler() {
   })
 }
 
+function collapseHandler() {
+  const myCollapseBtn = document.getElementById('collapseBtnExampleJS')
+  const myCollapse = document.getElementById('collapseExampleJS')
+  const bsCollapse = new Collapse(myCollapse, {
+    toggle: false
+  })
+
+  myCollapseBtn.addEventListener('click', function () {
+    bsCollapse.toggle()
+  })
+}
+
+function renderCollapse(){
+  const myCollapseBtn = document.getElementById('collapseBtnExampleJS')
+  const myCollapse = document.getElementById('collapseExampleJS')
+  const bsCollapse = new Collapse(myCollapse, {
+    toggle: false
+  })
+
+  myCollapseBtn.addEventListener('click',function(){
+    bsCollapse.toggle()
+  })
+}
 
 // alertHandler();
 // buttonHandler();
-// carouselHandler()
+// carouselHandler();
+// collapseHandler();
+renderCollapse();
