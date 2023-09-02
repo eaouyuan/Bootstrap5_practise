@@ -93,6 +93,49 @@ function renderCollapse(){
   })
 }
 
+function dropdownHandler() {
+  const myDropdowneBtn = document.getElementById('dropdownBtn')
+  const bsDropdown = new Dropdown(myDropdowneBtn, {
+    autoClose: true
+  })
+
+
+  myDropdowneBtn.addEventListener('click', function () {
+    bsDropdown.toggle()
+  })
+}
+
+
+function tabsHandler() {
+  const triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
+  triggerTabList.forEach(function (triggerEl) {
+    const tabTrigger = new Tab(triggerEl)
+
+    triggerEl.addEventListener('click', function (event) {
+      event.preventDefault()
+      tabTrigger.show()
+    })
+  })
+}
+
+function modalHandler() {
+  const myModalBtn = document.getElementById('exampleModalJSBtn')
+  const myModalClosedBtn = document.getElementById('exampleModalJSBtnClose')
+  const myModal = document.getElementById('exampleModalJS')
+
+  const myBsModal = new Modal(myModal)
+
+  myModalBtn.addEventListener('click', function () {
+    myBsModal.show()
+  })
+
+  myModalClosedBtn.addEventListener('click', function () {
+    myBsModal.hide()
+  })
+}
+
+
+
 // alertHandler();
 // buttonHandler();
 // carouselHandler();
