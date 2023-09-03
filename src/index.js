@@ -6,6 +6,10 @@ import Collapse from 'bootstrap/js/dist/collapse'
 import Alert from 'bootstrap/js/dist/alert'
 import Button from 'bootstrap/js/dist/button'
 import Carousel from 'bootstrap/js/dist/carousel'
+import Dropdown from 'bootstrap/js/dist/dropdown'
+import Tab from 'bootstrap/js/dist/tab'
+import Modal from 'bootstrap/js/dist/modal'
+import Offcanvas from 'bootstrap/js/dist/offcanvas'
 
 function alertHandler() {
   const alertCustomDiv = document.getElementById('alertCustom');
@@ -135,9 +139,26 @@ function modalHandler() {
 }
 
 
+function offcanvasHandler() {
+  const myOffcanvasBtn = document.getElementById('offcanvasExampleJSBtn')
+  const myOffcanvas = document.getElementById('offcanvasExampleJS')
+
+  const myBsOffcanvas = new Offcanvas(myOffcanvas, {
+    backdrop: true
+  })
+
+  myOffcanvasBtn.addEventListener('click', function () {
+    myBsOffcanvas.toggle()
+  })
+
+}
 
 // alertHandler();
 // buttonHandler();
 // carouselHandler();
 // collapseHandler();
-renderCollapse();
+// renderCollapse();
+// dropdownHandler();
+// tabsHandler();
+// modalHandler();
+// offcanvasHandler()
