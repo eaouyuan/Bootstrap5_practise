@@ -9,7 +9,8 @@
     "clean": "rd /s/q docs",
     "build:dev": "webpack --mode=development",
     "prod:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "prettier":"prettier -w ./src"
   },
   "author": "",
   "license": "ISC",
@@ -38,3 +39,5 @@
     "webpack-dev-server": "^4.15.1"
   }
 }
+
+
