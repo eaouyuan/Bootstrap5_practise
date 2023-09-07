@@ -130,4 +130,4 @@ offcanvasHandler();
 collapsePCHandler();
 renderItems();
 searchHandler();
-modalHandler()
+modalHandler();
